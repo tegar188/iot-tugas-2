@@ -1,0 +1,101 @@
+{
+    "version": 1,
+    "author": "ChatGPT",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-esp32-devkit-c-v4",
+        "id": "esp32",
+        "top": -50,
+        "left": 100,
+        "attrs": {}
+      },
+      {
+        "type": "wokwi-led",
+        "id": "ledMerah",
+        "top": 150,
+        "left": -60,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "ledKuning",
+        "top": 150,
+        "left": -10,
+        "attrs": { "color": "yellow" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "ledHijau",
+        "top": 150,
+        "left": 40,
+        "attrs": { "color": "green" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 200,
+        "left": -60,
+        "attrs": { "value": "220" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 200,
+        "left": -10,
+        "attrs": { "value": "220" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": 200,
+        "left": 40,
+        "attrs": { "value": "220" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": -100,
+        "left": 250,
+        "attrs": {}
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn2",
+        "top": -30,
+        "left": 250,
+        "attrs": {}
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn3",
+        "top": 40,
+        "left": 250,
+        "attrs": {}
+      }
+    ],
+     "connections": [
+      [ "ledMerah:A", "esp32:12", "green", [ "v0" ] ],
+      [ "r1:1", "ledMerah:C", "green", [ "v0" ] ],
+      [ "r1:2", "esp32:GND.1", "black", [ "v0", "h30" ] ],
+  
+      [ "ledKuning:A", "esp32:14", "green", [ "v0" ] ],
+      [ "r2:1", "ledKuning:C", "green", [ "v0" ] ],
+      [ "r2:2", "esp32:GND.1", "black", [ "v0", "h40" ] ],
+  
+      [ "ledHijau:A", "esp32:13", "green", [ "v0" ] ],
+      [ "r3:1", "ledHijau:C", "green", [ "v0" ] ],
+      [ "r3:2", "esp32:GND.1", "black", [ "v0", "h50" ] ],
+  
+      [ "btn1:1.l", "esp32:22", "green", [ "h0" ] ],
+      [ "btn1:2.l", "esp32:GND.2", "black", [ "h-10", "v50" ] ],
+  
+      [ "btn2:1.l", "esp32:21", "green", [ "h0" ] ],
+      [ "btn2:2.l", "esp32:GND.2", "black", [ "h-10", "v50" ] ],
+  
+      [ "btn3:1.l", "esp32:19", "green", [ "h0" ] ],
+      [ "btn3:2.l", "esp32:GND.2", "black", [ "h-10", "v50" ] ]
+    ]
+  
+  }
+  
